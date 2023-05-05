@@ -1,0 +1,25 @@
+{
+  "name": "cpsc-559-decentralized_yt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivansh9007/CPSC-559-Decentralized-YouTube.git"
+  },
+  "author": "shivansh9007",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivansh9007/CPSC-559-Decentralized-YouTube/issues"
+  },
+  "homepage": "https://github.com/shivansh9007/CPSC-559-Decentralized-YouTube#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.3"
+  }
+}
