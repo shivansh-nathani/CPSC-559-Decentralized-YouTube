@@ -9,6 +9,9 @@ contract UserActions is UserStore, VideoStore {
 
     event addVideoEvent(string _name, string _description, uint _publishedOn, string _IPFSHash,string uniqueId);
 
+    event addComment(uniqueId, comment);
+
+
     function addUser(string memory _name, string memory _bio, uint _age, string memory _city) public {
         _addUser(_name,_bio,_age,_city);
         emit UserCreation(msg.sender, _name, _bio, _age, _city);
@@ -27,6 +30,12 @@ contract UserActions is UserStore, VideoStore {
         require(checkUserExists(msg.sender) == true,"Please signup first");
         string memory uniqueId = _addVideo( _name, _description, _IPFSHash);
         emit addVideoEvent(_name, _description, block.timestamp, _IPFSHash, uniqueId);
+    }
+
+    function addComment(string memory uniqueId, string comment) public {
+        require(checkUserExists(msg.sender) == true,"Please signup first");
+        _addComment(unqiueId, comment, msg.sender);
+        emit addComment(uniqueId, comment);
     }
 
 }
